@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+--font-principal: Helvetica, Arial, sans-serif;
+--font-secundaria: "Spectral", Georgia;
+
+body {
+	font-family: var(--font-principal);
+}
