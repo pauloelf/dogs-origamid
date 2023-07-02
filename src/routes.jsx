@@ -1,11 +1,11 @@
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
-import Login from './pages/login/Login';
-import Enter from './pages/login/Enter';
-import Register from './pages/login/Register';
-import LostPassword from './pages/login/LostPassword';
-import ResetPassword from './pages/login/ResetPassword';
+import Login from './pages/Login';
+import Enter from './Components/form/login/Enter';
+import Register from './Components/form/login/Register';
+import LostPassword from './Components/form/login/LostPassword';
+import ResetPassword from './Components/form/login/ResetPassword';
 import NotFound from './pages/NotFound';
 
 function Rotas() {
