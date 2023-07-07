@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
---font-principal: Helvetica, Arial, sans-serif;
---font-secundaria: "Spectral", Georgia;
 
-body {
-	font-family: var(--font-principal);
+@layer components {
+	.input {
+		@apply text-base block bg-[#eee] p-[.625rem] w-full border border-[#eee] rounded-md transition focus:outline-0 focus:border-[#fb1] focus:bg-white focus:shadow-[0_0_0_3px_#fea] hover:outline-0 hover:border-[#fb1] hover:bg-white hover:shadow-[0_0_0_3px_#fea];
+	}
+	.btn {
+		@apply text-base font-primary text-[#764701] text-center bg-[#fb1] rounded-md py-3 px-5 w-32 focus:shadow-btn hover:shadow-btn focus:outline-none disabled:opacity-50 disabled:cursor-wait;
+	}
+	.title {
+		@apply text-5xl text-[#333] w-max font-secondary my-4 relative z-10 after:block after:w-6 after:h-6 after:rounded after:bg-[#fb1] after:absolute after:bottom-1 after:-left-1 after:-z-10;
+	}
 }
