@@ -15,7 +15,6 @@ const Header = () => {
         </Link>
         {data ? (
           <>
-            <button onClick={userLogout} className='bg-neutral-200 p-1 ml-2'>logout</button>
             <Link className="flex items-center text-gray-700" to="/conta">
               {data && data.nome}<User className="ml-2" />
             </Link>

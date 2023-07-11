@@ -19,8 +19,7 @@ export const UserStorage = ({children}) => {
 		setError(null)
 		setLogin(false)
 		window.localStorage.removeItem('token')
-		navigate('/login')
-	},[navigate])
+	},[])
 
 	const userCreate = async (user) => {
 		const { url, options} = USER_POST(user)
@@ -77,6 +76,8 @@ export const UserStorage = ({children}) => {
 				} finally {
 					setLoading(false)
 				}
+			} else {
+				setLogin(false)
 			}
 		}
 		autoLogin()

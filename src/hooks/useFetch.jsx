@@ -30,9 +30,8 @@ const useFetch = ({setLoading, setError, setData}) => {
 			return { response, json }
 		}
 	}, [setData, setError, setLoading])
-	return {
-		request
-	}
+
+	return { request }
 }
 
 export default useFetch
