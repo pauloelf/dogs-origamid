@@ -14,7 +14,7 @@ export const UserStorage = ({children}) => {
 	const {request} = useFetch({setLoading, setError})
 
 	const userLogout = useCallback(async () => {
-		setData(null)
+		setData('')
 		setLoading(false)
 		setError(null)
 		setLogin(false)

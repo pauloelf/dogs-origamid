@@ -6,7 +6,6 @@ const User = (props) => {
   return (
     <main>
       <UserHeader />
-      <div>User</div>
       <Outlet />
     </main>
   )

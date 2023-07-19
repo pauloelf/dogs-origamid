@@ -13,11 +13,7 @@ const validateForm = yup.object().shape({
 })
 
 const LostPassword = () => {
-  const [data, setData] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
-
-  const {request} = useFetch({setLoading, setError, setData})
+  const {request, error, data, loading} = useFetch()
   const {register, handleSubmit, formState: {errors}} = useForm({
     resolver: yupResolver(validateForm)
   });

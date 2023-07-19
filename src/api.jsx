@@ -75,3 +75,26 @@ export function PASSWORD_RESET(body) {
 		}
 	}
 }
+
+export function PHOTO_POST(data, token) {
+	return{
+		url: API + '/api/photo',
+		options: {
+			method: 'POST',
+			headers: {
+				Authorization: 'Bearer ' + token
+			},
+			body: data
+		}
+	}
+}
+
+export function PHOTO_GET({page, total, user}) {
+	return{
+		url: `${API}/api/photo/?_page=${page}&_total=${total}&_user=${user}`,
+		options: {
+			method: 'GET',
+			cache: 'no-store'
+		}
+	}
+}

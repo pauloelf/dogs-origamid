@@ -14,14 +14,10 @@ const validateForm = yup.object().shape({
 })
 
 const ResetPassword = () => {
-  const [data, setData] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
-
   const [login, setLogin] = useState('')
   const [key, setKey] = useState('')
 
-  const {request} = useFetch({setLoading, setError, setData})
+  const {request, error, loading} = useFetch()
   const {register, handleSubmit, formState: {errors}} = useForm({
     resolver: yupResolver(validateForm)
   });

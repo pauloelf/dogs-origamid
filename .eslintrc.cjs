@@ -23,6 +23,7 @@ module.exports = {
   plugins: ['react-refresh'],
   rules: {
     'react-refresh/only-export-components': 'off',
+    "no-mixed-spaces-and-tabs": 0,
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'no-unsafe-finally': 'off',

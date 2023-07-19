@@ -1,6 +1,9 @@
 import {useState, useCallback} from 'react'
 
-const useFetch = ({setLoading, setError, setData}) => {
+const useFetch = () => {
+	const [data, setData] = useState('')
+	const [loading, setLoading] = useState(null)
+	const [error, setError] = useState(null)
 	const request = useCallback(async (url, options) => {
 		let response, json
 
@@ -17,6 +20,8 @@ const useFetch = ({setLoading, setError, setData}) => {
 						throw new Error('Usuário ou email já cadastrado')
 					case '/login/perdeu':
 						throw new Error('Usuário não existe')
+					case 'conta/postar':
+						throw new Error('Falha ao postar. Tente novamente')
 					default:
 						throw new Error(json.message)
 				}
@@ -31,7 +36,7 @@ const useFetch = ({setLoading, setError, setData}) => {
 		}
 	}, [setData, setError, setLoading])
 
-	return { request }
+	return { request, error, data, loading }
 }
 
 export default useFetch
