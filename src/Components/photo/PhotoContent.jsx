@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import {UserContext} from '../../UserContext'
 import PhotoComments from './PhotoComments'
 import PhotoDelete from './PhotoDelete'
+import Image from '../Helper/Image'
 import {ReactComponent as Visualization} from '../../assets/svgs/visualizacao-black.svg'
 
 const PhotoContent = ({data}) => {
@@ -12,7 +13,7 @@ const PhotoContent = ({data}) => {
   return (
     <div className='photo-content' >
     	<div className='smmd:[grid-row:1/4] grid-row-[1]' >
-    		<img src={photo.src} alt={photo.title}/>
+        <Image src={photo.src} alt={photo.title} />
     	</div>
     	<div className='p-8 pb-0' >
   			<div className='flex justify-between mb-4 opacity-50 items-center'>

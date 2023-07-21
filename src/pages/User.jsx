@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 import UserHeader from '../Components/user/UserHeader'
 import {Outlet} from 'react-router-dom'
 
-const User = (props) => {
+const User = () => {
   return (
-    <main>
+    <div>
       <UserHeader />
       <Outlet />
-    </main>
+    </div>
   )
 }
 
-export default User;
+export default User

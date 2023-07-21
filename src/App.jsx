@@ -11,11 +11,13 @@ function App() {
     <BrowserRouter>
       <UserStorage>
         <Header />
-        <Rotas/>
+        <main className='flex-1'>
+          <Rotas/>
+        </main>
         <Footer />
       </UserStorage>
     </BrowserRouter>
   );
 }
 
-export default App;
+export default App

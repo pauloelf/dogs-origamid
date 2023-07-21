@@ -1,5 +1,6 @@
-import React from 'react'
+import {useContext} from 'react'
 import {Routes, Route} from 'react-router-dom'
+import {UserContext} from './UserContext'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import User from './pages/User'
@@ -14,6 +15,8 @@ import Feed from './Components/feed/Feed'
 import NotFound from './pages/NotFound'
 
 function Rotas() {
+  const {data} = useContext(UserContext)
+
 	return (
 		<Routes>
 			<Route path='*' element={<NotFound />} />
@@ -35,7 +38,7 @@ function Rotas() {
 					path=''
 					element={
 						<section className='mx-auto max-w-[50rem] px-4'>
-							<Feed />
+							<Feed user={data.id} />
 						</section>
 					}/>
 				<Route path='postar' element={<UserPhotoPost />} />

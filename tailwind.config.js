@@ -16,7 +16,8 @@ export default {
       animation: {
         'left': 'animaLeft .2s forwards',
         'scaleup': 'scaleUp .3s forwards',
-        'blink': 'latir .6s infinite'
+        'blink': 'latir .6s infinite',
+        'skeleton': 'skeleton 1.5s infinite linear'
       },
       keyframes: {
         animaLeft: {
@@ -45,6 +46,14 @@ export default {
           },
           'to': {
             opacity: '1'
+          }
+        },
+        skeleton: {
+          'from': {
+            backgroundPosition: '0px'
+          },
+          'to': {
+            backgroundPosition: '-200%'
           }
         }
       },
