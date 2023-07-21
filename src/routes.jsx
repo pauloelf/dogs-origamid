@@ -31,7 +31,13 @@ function Rotas() {
 						<User/>
 					</ProtectedRoute>
 				}>
-				<Route path='' element={<Feed />} />
+				<Route
+					path=''
+					element={
+						<section className='mx-auto max-w-[50rem] px-4'>
+							<Feed />
+						</section>
+					}/>
 				<Route path='postar' element={<UserPhotoPost />} />
 				<Route path='estatisticas' element={<UserStats />} />
 			</Route>

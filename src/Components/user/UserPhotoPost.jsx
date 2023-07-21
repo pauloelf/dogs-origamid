@@ -62,7 +62,7 @@ const UserPhotoPost = () => {
   }
 
   return (
-    <section className='grid grid-cols-2 gap-8 mb-8 p-4 max-w-[50rem] px-4 mx-auto animate-left' >
+    <section className='grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8 p-4 max-w-[50rem] px-4 mx-auto animate-left' >
       <form className='grid mb-8' onSubmit={handleSubmit(sendData)} >
         <Input type='text' label='Nome' name='nome' erro={errors.nome?.message} reg={register} />
         <Input type='number' label='Peso' name='peso' erro={errors.peso?.message} reg={register} />

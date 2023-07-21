@@ -1,17 +1,16 @@
-import React from 'react';
+import {useState} from 'react'
 import FeedModal from './FeedModal'
 import FeedPhotos from './FeedPhotos'
-import useFetch from '../../hooks/useFetch'
 
-const Feed = (props) => {
-  const {data} = useFetch()
+const Feed = () => {
+  const [modal, setModal] = useState(false)
   
   return (
     <div>
-      <FeedModal />
-      <FeedPhotos />
+      {modal && <FeedModal photo={modal} setModal={setModal} />}
+      <FeedPhotos setModal={setModal} />
     </div>
   )
 }
 
-export default Feed;
+export default Feed

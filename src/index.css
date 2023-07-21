@@ -5,6 +5,7 @@
 
 
 @layer components {
+	/* FORMULARIO */
 	.input {
 		@apply text-base block bg-[#eee] p-[.625rem] w-full border border-[#eee] rounded-md transition focus:outline-0 focus:border-[#fb1] focus:bg-white focus:shadow-[0_0_0_3px_#fea] hover:outline-0 hover:border-[#fb1] hover:bg-white hover:shadow-[0_0_0_3px_#fea];
 	}
@@ -13,6 +14,7 @@
 		@apply text-base font-primary text-[#764701] text-center bg-[#fb1] rounded-md py-3 px-5 w-32 focus:shadow-btn hover:shadow-btn focus:outline-none disabled:opacity-50 disabled:cursor-wait;
 	}
 
+	/* USUARIO */
 	.user-nav {
 		@apply block sm:grid sm:grid-cols-4 sm:gap-4 absolute sm:static right-0 top-[70px] px-4 sm:px-0 bg-white sm:bg-transparent shadow-[0_1px_2ox_rgba(0,0,0,.2)] sm:shadow-none opacity-0 sm:opacity-100 rounded translate-x-[-10px] sm:translate-x-0 pointer-events-none sm:pointer-events-auto;
 	}
@@ -29,8 +31,23 @@
 		@apply flex items-center bg-none w-full border-b border-b-[#eee] py-2 cursor-pointer;
 	}
 
+	/* TITULO */
 	.title {
 		@apply text-4xl sm:text-5xl text-[#333] w-max font-secondary my-4 relative z-10 after:block after:w-6 after:h-6 after:rounded after:bg-[#fb1] after:absolute after:bottom-1 after:-left-1 after:-z-10;
+	}
+
+	/* MODAL */
+	.modal {
+		@apply flex fixed w-screen h-screen top-0 left-0 bg-black/40 p-8 pr-[calc(2rem+15px)] sm:px-16 sm:py-8 sm:pr-[calc(4rem+15px)] z-50;
+	}
+
+  /* FOTO */
+	.photo-content {
+		@apply grid bg-white h-auto smmd:h-[36rem] m-auto grid-cols-[minmax(auto,40rem)] smmd:grid-cols-[36rem_20rem] grid-rows-[auto_1fr_auto] overflow-hidden max-h-[calc(100vh-4rem)] smmd:max-h-full overflow-y-auto smmd:overflow-y-hidden animate-scaleup
+	}
+
+	.atributos {
+		@apply mr-8 before:mr-2 before:mt-[5px] before:inline-block before:relative before:bg-[#333] before:h-[20px] before:w-[2px] before:top-[3px];
 	}
 }
 

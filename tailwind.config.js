@@ -14,7 +14,9 @@ export default {
         'btn': '0 0 0 3px #fea, 0 0 0 4px #fb1'
       },
       animation: {
-        'left': 'animaLeft .2s forwards'
+        'left': 'animaLeft .2s forwards',
+        'scaleup': 'scaleUp .3s forwards',
+        'blink': 'latir .6s infinite'
       },
       keyframes: {
         animaLeft: {
@@ -26,11 +28,32 @@ export default {
             transform: 'initial',
             opacity: '1'
           }
+        },
+        scaleUp: {
+          'from': {
+            transform: 'scale(.8)',
+            opacity: '0'
+          },
+          'to': {
+            transform: 'initial',
+            opacity: 'initial'
+          }
+        },
+        latir: {
+          'from': {
+            opacity: '0'
+          },
+          'to': {
+            opacity: '1'
+          }
         }
       },
       backgroundImage: {
         'login': "url('/src/assets/images/login.jpg')"
       },
+      screens: {
+        smmd: '64rem'
+      }
     },
   },
   plugins: [],
