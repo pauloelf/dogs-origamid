@@ -43,7 +43,7 @@
 
   /* FOTO */
 	.photo-content {
-		@apply grid bg-white h-auto smmd:h-[36rem] m-auto grid-cols-[minmax(auto,40rem)] smmd:grid-cols-[36rem_20rem] grid-rows-[auto_1fr_auto] overflow-hidden max-h-[calc(100vh-4rem)] smmd:max-h-full overflow-y-auto smmd:overflow-y-hidden animate-scaleup
+		@apply grid bg-white h-auto smmd:h-[36rem] m-auto grid-cols-[minmax(auto,40rem)] smmd:grid-cols-[36rem_20rem] grid-rows-[auto_1fr_auto] overflow-hidden max-h-[calc(100vh-4rem)] smmd:max-h-full overflow-y-auto smmd:overflow-y-hidden animate-scaleup;
 	}
 
 	.atributos {

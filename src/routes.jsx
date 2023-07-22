@@ -4,6 +4,8 @@ import {UserContext} from './UserContext'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import User from './pages/User'
+import UserProfile from './pages/UserProfile'
+import Photo from './pages/Photo'
 import Enter from './Components/form/login/Enter'
 import Register from './Components/form/login/Register'
 import LostPassword from './Components/form/login/LostPassword'
@@ -44,6 +46,8 @@ function Rotas() {
 				<Route path='postar' element={<UserPhotoPost />} />
 				<Route path='estatisticas' element={<UserStats />} />
 			</Route>
+			<Route path='foto/:id' element={<Photo />} />
+			<Route path='perfil/:user' element={<UserProfile />} />
 		</Routes>
 	)
 }

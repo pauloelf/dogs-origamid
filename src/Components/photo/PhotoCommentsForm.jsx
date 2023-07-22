@@ -3,7 +3,7 @@ import useFetch from '../../hooks/useFetch'
 import {ReactComponent as Send} from '../../assets/svgs/enviar.svg'
 import {COMMENT_POST} from '../../api'
 
-const PhotoCommentsForm = ({id, setComments}) => {
+const PhotoCommentsForm = ({id, setComments, single}) => {
 	const [comment, setComment] = useState('')
 	const {error, request} = useFetch()
 
@@ -19,7 +19,7 @@ const PhotoCommentsForm = ({id, setComments}) => {
 	}
 
   return (
-    <form className='grid grid-cols-[1fr_auto] m-4 items-stretch' onSubmit={handleSubmit}>
+    <form className={`grid grid-cols-[1fr_auto] items-stretch ${single ? 'p-0 py-4' : 'p-4'}`} onSubmit={handleSubmit}>
     	<textarea className='block text-base font-primary w-full bg-[#eee] border border-[#eee] p-2 outline-none rounded resize-none duration-200 focus:outline-none focus:border-[#fb1] focus:bg-white focus:shadow-[0_0_0_3px_#fea] hover:outline-none hover:border-[#fb1] hover:bg-white hover:shadow-[0_0_0_3px_#fea]' id='comment' name='comment' placeholder='Comente...' value={comment} onChange={(e) => setComment(e.target.value)} >
     		{comment}
     	</textarea>
