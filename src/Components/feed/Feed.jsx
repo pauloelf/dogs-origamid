@@ -12,7 +12,7 @@ const Feed = ({user}) => {
     let wait = false
     const infiniteScroll = () => {
       if (!infinite) return null
-        
+      
       const scroll = window.scrollY
       const height = document.body.offsetHeight - window.innerHeight
 

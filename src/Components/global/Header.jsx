@@ -1,11 +1,11 @@
-import {useContext, useState, useEffect} from 'react'
-import { Link } from 'react-router-dom'
-import { ReactComponent as Logo } from '../../assets/svgs/dogs.svg'
-import { ReactComponent as User } from '../../assets/svgs/usuario.svg'
-import {UserContext} from '../../UserContext'
+import { useContext } from "react"
+import { Link } from "react-router-dom"
+import { ReactComponent as Logo } from "../../assets/svgs/dogs.svg"
+import { ReactComponent as User } from "../../assets/svgs/usuario.svg"
+import { UserContext } from "../../UserContext"
 
 const Header = () => {
-  const {data} = useContext(UserContext)
+  const { data } = useContext(UserContext)
 
   return (
     <header className="fixed top-0 py-3 h-16 w-full z-10 bg-white shadow shadow-gray-100">
@@ -16,7 +16,8 @@ const Header = () => {
         {data && data.nome ? (
           <>
             <Link className="flex items-center text-gray-700" to="/conta">
-              {data && data.nome}<User className="ml-2" />
+              {data && data.nome}
+              <User className="ml-2" />
             </Link>
           </>
         ) : (
@@ -26,7 +27,7 @@ const Header = () => {
         )}
       </nav>
     </header>
-  );
-};
+  )
+}
 
 export default Header
