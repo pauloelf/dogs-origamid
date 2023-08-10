@@ -22,7 +22,7 @@ function Rotas() {
   return (
     <Routes>
       <Route path="*" element={<NotFound />} />
-      <Route path="/dogs-origamid" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="login" element={<Login />}>
         <Route path="" element={<Enter />} />
         <Route path="criar" element={<Register />} />
