@@ -35,7 +35,7 @@ const Register = () => {
 
   return (
     <section className="flex flex-col p-4 mt-[20vh] max-w-full sm:max-w-lg animate-left">
-      <Head title='Crie sue conta' />
+      <Head title='Crie sua conta' />
       <h1 className="title">Cadastre-se</h1>
       <form className="grid mb-8" onSubmit={handleSubmit(sendUser)}>
         <Input
