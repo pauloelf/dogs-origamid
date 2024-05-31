@@ -17,7 +17,7 @@ const Login = () => {
   if (loading) return <Loading />
   if (login) return <Navigate to="/conta" />
   return (
-    <div className="grid grid-cols-none sm:grid-cols-2 h-screen sm:gap-8">
+    <div className="grid grid-cols-none sm:grid-cols-2 h-full sm:gap-8">
       <div className="hidden sm:block sm:bg-login bg-cover bg-center "></div>
       <Outlet />
     </div>
