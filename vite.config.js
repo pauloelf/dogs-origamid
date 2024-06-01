@@ -16,5 +16,5 @@ export default defineConfig({
     }),
     svgr(),
   ],
-  base: "/dogs-origamid",
+  base: "/",
 })
