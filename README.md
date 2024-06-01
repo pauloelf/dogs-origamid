@@ -1,7 +1,7 @@
 # Dogs 🐾
 <div>
   <p>📝 Uma rede social para cachorros</p>
-  <div>Você pode acessar o site clicando <a href='https://pauloelf.github.io/dogs-origamid' target="_blank" rel="noopener noreferrer">aqui</a></div>
+  <div>Você pode acessar o site clicando <a href='https://dogs-paulodev.vercel.app/' target="_blank" rel="noopener noreferrer">aqui</a></div>
 </div>
 </br>
 
